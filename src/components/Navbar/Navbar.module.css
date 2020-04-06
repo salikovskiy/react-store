@@ -1,0 +1,94 @@
+.nav {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 600;
+}
+
+.toggler {
+  cursor: pointer;
+}
+
+.toggler span {
+  display: block;
+  width: 20px;
+  height: 6px;
+  border-top: 2px solid #000000;
+}
+
+.btn img {
+  width: 22px;
+  margin-right: 20px;
+}
+
+.btn:last-child img {
+  margin-right: 0;
+}
+
+.LinksWrapperMedium {
+  display: none;
+}
+
+.linksWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(175, 175, 175, 0.671);
+  transition: all 0.2s linear;
+}
+
+.list {
+  position: absolute;
+  width: 200px;
+  height: 100%;
+  background-color: #fff;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.listItem {
+  margin-bottom: 20px;
+}
+
+.buttonsWrapper {
+  display: flex;
+}
+
+.smallNone {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .linksWrapper {
+    display: block;
+  }
+  .smallNone {
+    display: block;
+  }
+  .toggler {
+    display: none;
+  }
+  .LinksWrapperMedium {
+    display: flex;
+  }
+  .list {
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 0;
+    position: unset;
+  }
+
+  .listItem {
+    margin-bottom: 0;
+    margin-right: 2rem;
+  }
+  .listItem:last-child {
+    margin-right: 0;
+  }
+}
