@@ -10,6 +10,7 @@
 
 .toggler {
   cursor: pointer;
+  margin-right: 20px;
 }
 
 .toggler span {
@@ -47,8 +48,7 @@
   width: 200px;
   height: 100%;
   background-color: #fff;
-  padding-left: 20px;
-  padding-top: 20px;
+  padding: 20px;
 }
 
 .listItem {
@@ -59,8 +59,16 @@
   display: flex;
 }
 
+.togglerWrapper {
+  display: flex;
+}
+
 .smallNone {
   display: none;
+}
+
+.smallDisplay {
+  display: block;
 }
 
 @media (min-width: 768px) {
@@ -70,7 +78,10 @@
   .smallNone {
     display: block;
   }
-  .toggler {
+  .togglerWrapper {
+    display: none;
+  }
+  .smallDisplay {
     display: none;
   }
   .LinksWrapperMedium {
@@ -90,5 +101,8 @@
   }
   .listItem:last-child {
     margin-right: 0;
+  }
+  .btn img {
+    margin-right: 30px;
   }
 }

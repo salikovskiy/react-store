@@ -39,6 +39,7 @@
   margin: 0;
   padding: 0;
   outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 ul,
@@ -59,4 +60,17 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+@media (min-width: 1000px) {
+  .container {
+    width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1240px) {
+  .container {
+    width: 1240px;
+  }
 }

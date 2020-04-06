@@ -16,12 +16,17 @@ class Navbar extends Component {
 
   render() {
     return (
-      <nav className={css.nav}>
-        <button className={css.toggler} onClick={this.handleToggler}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+      <nav className={`${css.nav} container`}>
+        <div className={css.togglerWrapper}>
+          <button className={css.toggler} onClick={this.handleToggler}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <button className={`${css.btn} ${css.smallDisplay}`}>
+            <img src={loupeIcon} alt="loupe icon" />
+          </button>
+        </div>
         <div className="logoWrapper">
           <p className={css.logo}>clearness</p>
         </div>
@@ -36,14 +41,17 @@ class Navbar extends Component {
             <li className={css.listItem}>оптичні</li>
             <li className={css.listItem}>про нас</li>
             <li className={css.listItem}>контакти</li>
+            <li className={`${css.listItem} ${css.smallDisplay}`}>
+              мої вподобання
+            </li>
           </ul>
         </div>
         <div className={css.buttonsWrapper}>
           <button className={`${css.btn} ${css.smallNone}`}>
-            <img src={heartIcon} alt="heart icon" />
+            <img src={loupeIcon} alt="loupe icon" />
           </button>
           <button className={`${css.btn} ${css.smallNone}`}>
-            <img src={loupeIcon} alt="loupe icon" />
+            <img src={heartIcon} alt="heart icon" />
           </button>
           <button className={css.btn}>
             <img src={cartIcon} alt="cart icon" />
