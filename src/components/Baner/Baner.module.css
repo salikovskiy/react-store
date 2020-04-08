@@ -1,0 +1,133 @@
+.bannerWrapper {
+  height: 445px;
+  background-color: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+}
+
+.banerHeading {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  font-weight: 600;
+  font-size: 3rem;
+  z-index: 2;
+}
+
+.banerParagraph {
+  position: absolute;
+  top: 100px;
+  left: 22px;
+  z-index: 2;
+}
+
+.banerLink {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #848484;
+  border-bottom: 1px solid #848484;
+  z-index: 2;
+  font-size: 13px;
+}
+
+.banerImage {
+  width: 370px;
+  position: absolute;
+  top: 50px;
+  right: -100px;
+  z-index: 2;
+  transition: all 0.2s linear;
+}
+
+.banerImageSecond {
+  width: 370px;
+  position: absolute;
+  z-index: 1;
+  right: -100px;
+  bottom: -100px;
+}
+
+.banerImageThree {
+  display: none;
+}
+
+.newIcon {
+  position: absolute;
+  top: 150px;
+  right: 173px;
+  width: 75px;
+  z-index: 2;
+}
+
+.banerPrice {
+  display: none;
+}
+
+@media (min-width: 530px) {
+  .banerPrice {
+    display: block;
+    position: absolute;
+    top: 230px;
+    left: 30px;
+    font-size: 45px;
+  }
+  .banerPrice::after {
+    content: "1200грн";
+    text-decoration: line-through;
+    color: red;
+    font-size: 20px;
+    position: absolute;
+    top: -18px;
+    right: -25px;
+  }
+}
+
+@media (min-width: 768px) {
+  .banerImage {
+    right: 70px;
+    top: -60px;
+  }
+  .banerImageSecond {
+    right: 70px;
+    bottom: -50px;
+  }
+
+  .banerHeading {
+    font-size: 4.6rem;
+  }
+
+  .banerParagraph {
+    top: 130px;
+  }
+  .newIcon {
+    top: 45px;
+    right: 90px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .banerHeading {
+    left: 70px;
+  }
+  .banerParagraph {
+    left: 72px;
+  }
+  .banerLink {
+    left: 70px;
+    bottom: 40px;
+  }
+  .banerPrice {
+    left: 70px;
+  }
+}
+
+@media (min-width: 1240px) {
+  .banerImageThree {
+    display: block;
+    position: absolute;
+    width: 355px;
+    left: 35%;
+    bottom: -7%;
+  }
+}

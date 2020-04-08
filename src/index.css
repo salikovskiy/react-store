@@ -42,6 +42,11 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 ul,
 ol {
   list-style: none;

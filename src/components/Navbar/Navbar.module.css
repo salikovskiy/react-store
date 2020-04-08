@@ -29,7 +29,7 @@
   margin-right: 0;
 }
 
-.LinksWrapperMedium {
+.linksWrapperMedium {
   display: none;
 }
 
@@ -41,6 +41,7 @@
   height: 100%;
   background-color: rgba(175, 175, 175, 0.671);
   transition: all 0.2s linear;
+  z-index: 9999;
 }
 
 .list {
@@ -49,6 +50,10 @@
   height: 100%;
   background-color: #fff;
   padding: 20px;
+}
+
+.linksWrapper ul {
+  animation-duration: 0.5s;
 }
 
 .listItem {
@@ -84,7 +89,7 @@
   .smallDisplay {
     display: none;
   }
-  .LinksWrapperMedium {
+  .linksWrapperMedium {
     display: flex;
   }
   .list {

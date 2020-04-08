@@ -1,9 +1,11 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import css from "./Navbar.module.css";
 import heartIcon from "../../assets/icons/heart.svg";
 import loupeIcon from "../../assets/icons/loupe.svg";
 import cartIcon from "../../assets/icons/shopping-cart.svg";
 import userIcon from "../../assets/icons/user.svg";
+import "animate.css";
 
 class Navbar extends Component {
   state = {
@@ -28,21 +30,39 @@ class Navbar extends Component {
           </button>
         </div>
         <div className="logoWrapper">
-          <p className={css.logo}>clearness</p>
+          <p className={css.logo}>
+            <Link to="/">clearness</Link>
+          </p>
         </div>
         <div
           className={
-            this.state.open ? css.linksWrapper : css.LinksWrapperMedium
+            this.state.open ? css.linksWrapper : css.linksWrapperMedium
           }
-          onClick={this.handleToggler}
+          onClick={(e) => {
+            if (
+              e.target.nodeName === "DIV" ||
+              (e.target.nodeName === "A" &&
+                e.target.parentNode.parentNode.parentNode.className ===
+                  css.linksWrapper)
+            )
+              this.handleToggler();
+          }}
         >
-          <ul className={css.list}>
-            <li className={css.listItem}>сонцезахисні</li>
-            <li className={css.listItem}>оптичні</li>
-            <li className={css.listItem}>про нас</li>
-            <li className={css.listItem}>контакти</li>
+          <ul className={`${css.list} animated slideInLeft`}>
+            <li className={css.listItem}>
+              <Link to="/sunglasses">сонцезахисні</Link>
+            </li>
+            <li className={css.listItem}>
+              <Link to="/optical">оптичні</Link>
+            </li>
+            <li className={css.listItem}>
+              <Link to="/about">про нас</Link>
+            </li>
+            <li className={css.listItem}>
+              <Link to="/contacts">контакти</Link>
+            </li>
             <li className={`${css.listItem} ${css.smallDisplay}`}>
-              мої вподобання
+              <Link to="/favorites">мої вподобання</Link>
             </li>
           </ul>
         </div>
@@ -50,15 +70,15 @@ class Navbar extends Component {
           <button className={`${css.btn} ${css.smallNone}`}>
             <img src={loupeIcon} alt="loupe icon" />
           </button>
-          <button className={`${css.btn} ${css.smallNone}`}>
+          <Link to="/favorites" className={`${css.btn} ${css.smallNone}`}>
             <img src={heartIcon} alt="heart icon" />
-          </button>
-          <button className={css.btn}>
+          </Link>
+          <Link to="/cart" className={css.btn}>
             <img src={cartIcon} alt="cart icon" />
-          </button>
-          <button className={css.btn}>
+          </Link>
+          <Link to="profile" className={css.btn}>
             <img src={userIcon} alt="user icon" />
-          </button>
+          </Link>
         </div>
       </nav>
     );
