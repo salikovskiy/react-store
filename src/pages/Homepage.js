@@ -7,8 +7,8 @@ class Homepage extends Component {
   render() {
     return (
       <div className="container">
-        <Baner />
         <Slider />
+        <Baner />
       </div>
     );
   }

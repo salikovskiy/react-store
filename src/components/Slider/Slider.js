@@ -4,17 +4,19 @@ import "@brainhubeu/react-carousel/lib/style.css";
 import css from "./Slider.module.css";
 
 const Slider = () => (
-  <Carousel autoPlay={4000} animationSpeed={1000} infinite>
-    <div className={`${css.imageOne} ${css.slider}`}>
-      <p className={css.sliderText}>Стиль</p>
+  <div className={css.carousel}>
+    <Carousel autoPlay={4000} animationSpeed={1000} infinite>
+      <div className={`${css.imageOne} ${css.slider}`}></div>
+      <div className={`${css.imageTwo} ${css.slider}`}></div>
+      <div className={`${css.imageThree} ${css.slider}`}></div>
+    </Carousel>
+    <div className={css.carouselTextWrapper}>
+      <p className={css.carouselText}>
+        Захист від синього світла та зменшення цифрового напруження очей.
+        Додавайте в будь-яку оправу (Rx або Non-Rx)
+      </p>
     </div>
-    <div className={`${css.imageTwo} ${css.slider}`}>
-      <p className={css.sliderText}>Вишуканість</p>
-    </div>
-    <div className={`${css.imageThree} ${css.slider}`}>
-      <p className={css.sliderText}>Зручність</p>
-    </div>
-  </Carousel>
+  </div>
 );
 
 export default Slider;
