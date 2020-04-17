@@ -1,0 +1,99 @@
+.carousel {
+  position: relative;
+}
+
+.textWrapper {
+  width: 100%;
+  position: absolute;
+  top: 85px;
+  font-size: 18px;
+  color: #fff;
+  text-align: left;
+  padding: 20px;
+}
+
+.textWrapper .testButton {
+  animation-duration: 2s;
+}
+
+.testButton {
+  color: #000000;
+  background-color: #fff;
+  font-size: 20px;
+  padding: 10px 20px 10px 45px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.testButton::before {
+  content: "";
+  background-image: url(../../assets/icons/start.svg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 16px;
+  top: 12px;
+}
+
+.testHeading {
+  margin: 0 auto;
+  font-weight: 600;
+  font-size: 35px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.testParagraph {
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.imageOne {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(../../assets/images/sliderImgOne.jpg);
+}
+
+.imageTwo {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(../../assets/images/sliderImgTwo.jpg);
+}
+
+.imageThree {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(../../assets/images/sliderImgThree.jpg);
+}
+
+.slider {
+  height: 440px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  .testHeading {
+    font-size: 60px;
+  }
+  .testParagraph {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .textWrapper {
+    padding-left: 70px;
+  }
+
+  .testHeading {
+    font-size: 4.6rem;
+    margin-bottom: 10px;
+  }
+
+  .testParagraph {
+    width: 100%;
+    font-size: 22px;
+    margin-bottom: 50px;
+  }
+}

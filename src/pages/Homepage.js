@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Baner from "../components/Baner/Baner";
-import Slider from "../components/Slider/Slider";
+import Slider from "../components/Carousel/Carousel";
 
 class Homepage extends Component {
   state = {};
