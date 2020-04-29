@@ -1,0 +1,8 @@
+.btn img {
+  width: 20px;
+  margin-right: 20px;
+}
+
+.infoWrapper {
+  display: flex;
+}
