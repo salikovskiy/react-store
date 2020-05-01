@@ -1,3 +1,13 @@
-# react-online-store
+## React online store
+### [💽 Demo](https://github.com/salikovskiy/react-store/) 
+ 
+This project is still in progress
+ 
+ ## Features:
 
-Online store using React.js
+- [x] in progress...
+
+## Built With
+
+- React, React Router
+- Redux
